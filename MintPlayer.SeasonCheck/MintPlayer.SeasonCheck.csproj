@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>MintPlayer</Company>
+    <Authors>Pieterjan De Clippel</Authors>
+    <Description>This package allows you to find the season for a certain date.</Description>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/MintPlayer/MintPlayer.SeasonCheck</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>Season, DateTime</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
