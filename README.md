@@ -77,3 +77,7 @@ The SeasonChecker becomes available in the Service Container with the following 
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
     }
+
+## Equivalent approach in SQL
+
+[CheckSeason.sql](https://github.com/MintPlayer/MintPlayer.SeasonCheck/blob/master/MintPlayer.SeasonCheck/CheckSeason.sql)
