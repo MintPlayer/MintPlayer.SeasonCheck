@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace MintPlayer.SeasonCheck
 {
     public interface ISeasonChecker
     {
-        Task<ISeason> FindSeasonAsync(IEnumerable<ISeason> seasons, DateTime date);
+        Task<TSeason> FindSeasonAsync<TSeason>(IEnumerable<TSeason> seasons, DateTime date) where TSeason : class, ISeason;
     }
 
     internal class SeasonChecker : ISeasonChecker
@@ -16,7 +16,7 @@ namespace MintPlayer.SeasonCheck
         {
         }
 
-        public Task<ISeason> FindSeasonAsync(IEnumerable<ISeason> seasons, DateTime date)
+        public Task<TSeason> FindSeasonAsync<TSeason>(IEnumerable<TSeason> seasons, DateTime date) where TSeason : class, ISeason
         {
             var result = seasons
                 .Select(s =>
@@ -25,7 +25,7 @@ namespace MintPlayer.SeasonCheck
                     if (s.Start.Year == s.End.Year)
                     {
                         return new[] {
-                            new SeasonWrapper<ISeason>
+                            new SeasonWrapper<TSeason>
                             {
                                 OriginalSeason = s,
                                 // Remap the season to the year 2000
@@ -41,7 +41,7 @@ namespace MintPlayer.SeasonCheck
                     {
                         // If the season crosses the newyear, split the season
                         return new[] {
-                            new SeasonWrapper<ISeason>
+                            new SeasonWrapper<TSeason>
                             {
                                 OriginalSeason = s,
                                 // Remap the season to the year 2000
@@ -51,7 +51,7 @@ namespace MintPlayer.SeasonCheck
                                     End = new DateTime(2000, 12, 31)
                                 }
                             },
-                            new SeasonWrapper<ISeason>
+                            new SeasonWrapper<TSeason>
                             {
                                 OriginalSeason = s,
                                 // Remap the season to the year 2000
