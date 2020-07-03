@@ -25,8 +25,7 @@ namespace MintPlayer.SeasonCheck
                     if (s.Start.Year == s.End.Year)
                     {
                         return new[] {
-                            new SeasonWrapper<TSeason>
-                            {
+                            new {
                                 OriginalSeason = s,
                                 // Remap the season to the year 2000
                                 ProcessableSeason = new InternalSeason {
@@ -41,8 +40,7 @@ namespace MintPlayer.SeasonCheck
                     {
                         // If the season crosses the newyear, split the season
                         return new[] {
-                            new SeasonWrapper<TSeason>
-                            {
+                            new {
                                 OriginalSeason = s,
                                 // Remap the season to the year 2000
                                 ProcessableSeason = new InternalSeason {
@@ -51,8 +49,7 @@ namespace MintPlayer.SeasonCheck
                                     End = new DateTime(2000, 12, 31)
                                 }
                             },
-                            new SeasonWrapper<TSeason>
-                            {
+                            new {
                                 OriginalSeason = s,
                                 // Remap the season to the year 2000
                                 ProcessableSeason = new InternalSeason {
