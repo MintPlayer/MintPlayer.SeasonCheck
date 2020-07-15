@@ -81,3 +81,7 @@ The SeasonChecker becomes available in the Service Container with the following 
 ## Equivalent approach in SQL
 
 [CheckSeason.sql](https://github.com/MintPlayer/MintPlayer.SeasonCheck/blob/master/MintPlayer.SeasonCheck/CheckSeason.sql)
+
+## Example with EntityFrameworkCore
+
+[EfCoreSeasonCheck](https://github.com/PieterjanDeClippel/EfCoreSeasonCheck)
