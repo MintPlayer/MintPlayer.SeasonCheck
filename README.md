@@ -1,6 +1,7 @@
 # MintPlayer.SeasonCheck
 [![NuGet Version](https://img.shields.io/nuget/v/MintPlayer.SeasonCheck.svg?style=flat)](https://www.nuget.org/packages/MintPlayer.SeasonCheck)
 [![NuGet](https://img.shields.io/nuget/dt/MintPlayer.SeasonCheck.svg?style=flat)](https://www.nuget.org/packages/MintPlayer.SeasonCheck)
+[![Build Status](https://travis-ci.org/MintPlayer/MintPlayer.SeasonCheck.svg?branch=master)](https://travis-ci.org/MintPlayer/MintPlayer.SeasonCheck)
 
 Helper library find out the season for a specific date.
 ## NuGet package
