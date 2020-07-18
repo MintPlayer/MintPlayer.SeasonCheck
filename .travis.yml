@@ -3,7 +3,7 @@ mono: latest
 dotnet: 3.1.302
 before_install:
  - sudo apt-get update
-install
+install:
  - dotnet restore
 script:
  - dotnet build ./MintPlayer.SeasonCheck/MintPlayer.SeasonCheck.csproj --configuration Release
