@@ -1,22 +1,22 @@
-# MintPlayer.SeasonCheck
-[![NuGet Version](https://img.shields.io/nuget/v/MintPlayer.SeasonCheck.svg?style=flat)](https://www.nuget.org/packages/MintPlayer.SeasonCheck)
-[![NuGet](https://img.shields.io/nuget/dt/MintPlayer.SeasonCheck.svg?style=flat)](https://www.nuget.org/packages/MintPlayer.SeasonCheck)
-[![Build Status](https://travis-ci.org/MintPlayer/MintPlayer.SeasonCheck.svg?branch=master)](https://travis-ci.org/MintPlayer/MintPlayer.SeasonCheck)
-![.NET Core](https://github.com/MintPlayer/MintPlayer.SeasonCheck/workflows/.NET%20Core/badge.svg)
+# MintPlayer.SeasonChecker
+[![NuGet Version](https://img.shields.io/nuget/v/MintPlayer.SeasonChecker.svg?style=flat)](https://www.nuget.org/packages/MintPlayer.SeasonChecker)
+[![NuGet](https://img.shields.io/nuget/dt/MintPlayer.SeasonCheck.svg?style=flat)](https://www.nuget.org/packages/MintPlayer.SeasonChecker)
+[![Build Status](https://travis-ci.org/MintPlayer/MintPlayer.SeasonCheck.svg?branch=master)](https://travis-ci.org/MintPlayer/MintPlayer.SeasonChecker)
+![.NET Core](https://github.com/MintPlayer/MintPlayer.SeasonChecker/workflows/.NET%20Core/badge.svg)
 
 Helper library find out the season for a specific date.
 ## NuGet package
-https://www.nuget.org/packages/MintPlayer.SeasonCheck/
+https://www.nuget.org/packages/MintPlayer.SeasonChecker/
 ## Installation
 ### NuGet package manager
-Open the NuGet package manager and install MintPlayer.SeasonCheck in your project
+Open the NuGet package manager and install MintPlayer.SeasonChecker in your project
 ### Package manager console
-Install-Package MintPlayer.SeasonCheck
+Install-Package MintPlayer.SeasonChecker
 ## Usage
-### Adding SeasonCheck services
+### Adding SeasonChecker services
 The SeasonChecker becomes available in the Service Container with the following command (Startup@ConfigureServices).
 
-    services.AddSeasonCheck();
+    services.AddSeasonChecker();
 
 ### Code sample
 
@@ -82,7 +82,7 @@ The SeasonChecker becomes available in the Service Container with the following 
 
 ## Equivalent approach in SQL
 
-[CheckSeason.sql](https://github.com/MintPlayer/MintPlayer.SeasonCheck/blob/master/MintPlayer.SeasonCheck/CheckSeason.sql)
+[CheckSeason.sql](https://github.com/MintPlayer/MintPlayer.SeasonChecker/blob/master/MintPlayer.SeasonChecker/CheckSeason.sql)
 
 ## Example with EntityFrameworkCore
 
