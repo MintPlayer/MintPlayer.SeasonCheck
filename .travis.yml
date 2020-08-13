@@ -6,6 +6,6 @@ before_install:
 install:
  - dotnet restore
 script:
- - dotnet build ./MintPlayer.SeasonCheck/MintPlayer.SeasonCheck.csproj --configuration Release --no-restore
+ - dotnet build ./MintPlayer.SeasonChecker/MintPlayer.SeasonChecker.csproj --configuration Release --no-restore
  - dotnet test --no-restore --verbosity normal
 sudo: required
