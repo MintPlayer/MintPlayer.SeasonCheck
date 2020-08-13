@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MintPlayer.SeasonCheck\MintPlayer.SeasonCheck.csproj" />
+    <ProjectReference Include="..\MintPlayer.SeasonChecker\MintPlayer.SeasonChecker.csproj" />
   </ItemGroup>
 
 </Project>

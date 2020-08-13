@@ -1,6 +1,7 @@
-﻿using System;
+﻿using MintPlayer.SeasonChecker.Abstractions;
+using System;
 
-namespace MintPlayer.SeasonCheck
+namespace MintPlayer.SeasonChecker
 {
     internal class InternalSeason : ISeason
     {

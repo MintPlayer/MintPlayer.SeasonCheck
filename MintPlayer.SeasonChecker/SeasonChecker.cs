@@ -2,14 +2,10 @@
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using MintPlayer.SeasonChecker.Abstractions;
 
-namespace MintPlayer.SeasonCheck
+namespace MintPlayer.SeasonChecker
 {
-    public interface ISeasonChecker
-    {
-        Task<TSeason> FindSeasonAsync<TSeason>(IEnumerable<TSeason> seasons, DateTime date) where TSeason : class, ISeason;
-    }
-
     internal class SeasonChecker : ISeasonChecker
     {
         public SeasonChecker()

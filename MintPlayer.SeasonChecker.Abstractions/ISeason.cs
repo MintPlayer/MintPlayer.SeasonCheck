@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MintPlayer.SeasonCheck
+namespace MintPlayer.SeasonChecker.Abstractions
 {
     public interface ISeason
     {

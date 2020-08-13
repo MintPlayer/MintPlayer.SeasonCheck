@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using MintPlayer.SeasonChecker.Abstractions;
 
-namespace MintPlayer.SeasonCheck
+namespace MintPlayer.SeasonChecker
 {
     public static class SeasonCheckerExtensions
     {
