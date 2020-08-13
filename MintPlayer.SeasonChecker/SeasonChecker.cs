@@ -12,6 +12,76 @@ namespace MintPlayer.SeasonChecker
         {
         }
 
+        public Task<TSeason> FindSeasonAsync<TSeason>(eHemisphere hemisphere, DateTime date) where TSeason : class, ISeason, new()
+        {
+            IEnumerable<TSeason> seasons;
+            switch (hemisphere)
+            {
+                case eHemisphere.Northern:
+                    seasons = new List<TSeason>
+                    {
+                        new TSeason
+                        {
+                            Name = "Spring",
+                            Start = new DateTime(2000, 3, 21),
+                            End = new DateTime(2000, 6, 20)
+                        },
+                        new TSeason
+                        {
+                            Name = "Summer",
+                            Start = new DateTime(2000, 6, 21),
+                            End = new DateTime(2000, 9, 20)
+                        },
+                        new TSeason
+                        {
+                            Name = "Automn",
+                            Start = new DateTime(2000, 9, 21),
+                            End = new DateTime(2000, 12,20)
+                        },
+                        new TSeason
+                        {
+                            Name = "Winter",
+                            Start = new DateTime(2000, 12, 21),
+                            End = new DateTime(2001, 3, 20)
+                        }
+                    };
+                    break;
+                case eHemisphere.Southern:
+                    seasons = new List<TSeason>
+                    {
+                        new TSeason
+                        {
+                            Name = "Automn",
+                            Start = new DateTime(2000, 3, 21),
+                            End = new DateTime(2000, 6, 20)
+                        },
+                        new TSeason
+                        {
+                            Name = "Winter",
+                            Start = new DateTime(2000, 6, 21),
+                            End = new DateTime(2000, 9, 20)
+                        },
+                        new TSeason
+                        {
+                            Name = "Spring",
+                            Start = new DateTime(2000, 9, 21),
+                            End = new DateTime(2000, 12,20)
+                        },
+                        new TSeason
+                        {
+                            Name = "Summer",
+                            Start = new DateTime(2000, 12, 21),
+                            End = new DateTime(2001, 3, 20)
+                        }
+                    };
+                    break;
+                default:
+                    throw new ArgumentException("Values allowed for parameter hemisphere: Northern, Southern", nameof(hemisphere));
+            }
+
+            return FindSeasonAsync(seasons, date);
+        }
+
         public Task<TSeason> FindSeasonAsync<TSeason>(IEnumerable<TSeason> seasons, DateTime date) where TSeason : class, ISeason
         {
             var result = seasons

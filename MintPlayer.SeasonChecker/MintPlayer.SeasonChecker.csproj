@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Company>MintPlayer</Company>
     <Authors>Pieterjan De Clippel</Authors>
-	<Version>1.1.0</Version>
+	<Version>1.1.1</Version>
 	<Description>This package allows you to find the season for a certain date.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/MintPlayer/MintPlayer.SeasonChecker</RepositoryUrl>
@@ -15,11 +15,12 @@
 	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageTags>Season, DateTime</PackageTags>
     <PackageProjectUrl>https://github.com/MintPlayer/MintPlayer.SeasonChecker/MintPlayer.SeasonChecker</PackageProjectUrl>
+    <PackageReleaseNotes>Add overload to pick hemisphere with built-in seasons</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.5" />
-    <PackageReference Include="MintPlayer.SeasonChecker.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7" />
+    <PackageReference Include="MintPlayer.SeasonChecker.Abstractions" Version="1.0.3" />
   </ItemGroup>
 
 </Project>
