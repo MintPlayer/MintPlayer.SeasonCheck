@@ -3,6 +3,7 @@
 [![NuGet](https://img.shields.io/nuget/dt/MintPlayer.SeasonChecker.svg?style=flat)](https://www.nuget.org/packages/MintPlayer.SeasonChecker)
 [![Build Status](https://travis-ci.org/MintPlayer/MintPlayer.SeasonChecker.svg?branch=master)](https://travis-ci.org/MintPlayer/MintPlayer.SeasonChecker)
 ![.NET Core](https://github.com/MintPlayer/MintPlayer.SeasonChecker/workflows/.NET%20Core/badge.svg)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Helper library find out the season for a specific date.
 ## NuGet package
