@@ -8,10 +8,6 @@ namespace MintPlayer.SeasonChecker
 {
     internal class SeasonChecker : ISeasonChecker
     {
-        public SeasonChecker()
-        {
-        }
-
         public Task<TSeason> FindSeasonAsync<TSeason>(eHemisphere hemisphere, DateTime date) where TSeason : class, ISeason, new()
         {
             IEnumerable<TSeason> seasons;

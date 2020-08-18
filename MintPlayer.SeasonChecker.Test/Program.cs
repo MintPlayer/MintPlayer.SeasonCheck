@@ -4,7 +4,7 @@ using System;
 
 namespace MintPlayer.SeasonChecker.Test
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -20,7 +20,7 @@ namespace MintPlayer.SeasonChecker.Test
             #region Test with sourced seasons
 
             // These seasons may come from a DbContext
-            var seasons = new Season[] {
+            var seasons = new[] {
                 new Season { Name= "Spring", Start = new DateTime(2000, 3, 21), End = new DateTime(2000, 6, 20) },
                 new Season { Name = "Summer", Start = new DateTime(2000, 6, 21), End = new DateTime(2000, 9, 20) },
                 new Season { Name = "Automn", Start = new DateTime(2000, 9, 21), End = new DateTime(2000, 12, 20) },

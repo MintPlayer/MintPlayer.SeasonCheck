@@ -1,0 +1,3 @@
+---
+exclude_paths:
+  - 'MintPlayer.SeasonChecker/CheckSeason.sql'
