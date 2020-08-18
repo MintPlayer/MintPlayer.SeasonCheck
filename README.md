@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/MintPlayer/MintPlayer.SeasonChecker.svg?branch=master)](https://travis-ci.org/MintPlayer/MintPlayer.SeasonChecker)
 ![.NET Core](https://github.com/MintPlayer/MintPlayer.SeasonChecker/workflows/.NET%20Core/badge.svg)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6181114185bf40e7bfccc2aa7a794f8a)](https://www.codacy.com/gh/MintPlayer/MintPlayer.SeasonChecker?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MintPlayer/MintPlayer.SeasonChecker&amp;utm_campaign=Badge_Grade)
 
 Helper library find out the season for a specific date.
 ## Installation
