@@ -6,8 +6,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Helper library find out the season for a specific date.
-## NuGet package
-https://www.nuget.org/packages/MintPlayer.SeasonChecker/
 ## Installation
 ### NuGet package manager
 Open the NuGet package manager and install MintPlayer.SeasonChecker in your project
@@ -19,7 +17,38 @@ The SeasonChecker becomes available in the Service Container with the following 
 
     services.AddSeasonChecker();
 
-### Code sample
+### Code samples
+#### Use built-in seasons
+
+    using System;
+    using Microsoft.Extensions.DependencyInjection;
+    using MintPlayer.SeasonChecker;
+    using MintPlayer.SeasonChecker.Abstractions;
+
+    public class Program
+    {
+        public static void Main()
+        {
+            var serviceProvider = new ServiceCollection()
+                .AddSeasonChecker()
+                .BuildServiceProvider();
+
+            var seasonChecker = serviceProvider.GetService<ISeasonChecker>();
+            var season = seasonChecker.FindSeasonAsync<Season>(eHemisphere.Northern, DateTime.Today).Result;
+            Console.WriteLine(season.Name);
+        }
+    }
+
+    public class Season : ISeason
+    {
+        public string Name { get; set; }
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
+    }
+
+[.NET Fiddle](https://dotnetfiddle.net/wClSFp)
+
+#### Use your own seasons
 
     class Program
     {
