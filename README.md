@@ -111,6 +111,8 @@ The SeasonChecker becomes available in the Service Container with the following 
         public DateTime End { get; set; }
     }
 
+[.NET Fiddle](https://dotnetfiddle.net/y50ieG)
+
 ## Equivalent approach in SQL
 
 [CheckSeason.sql](https://github.com/MintPlayer/MintPlayer.SeasonChecker/blob/master/MintPlayer.SeasonChecker/CheckSeason.sql)
