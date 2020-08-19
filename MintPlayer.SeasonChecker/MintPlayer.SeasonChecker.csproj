@@ -1,26 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Company>MintPlayer</Company>
-    <Authors>Pieterjan De Clippel</Authors>
-	<Version>1.1.2</Version>
-	<Description>This package allows you to find the season for a certain date.</Description>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/MintPlayer/MintPlayer.SeasonChecker</RepositoryUrl>
-    <RepositoryType>Git</RepositoryType>
-	<PackageId>MintPlayer.SeasonChecker</PackageId>
-	<Product>MintPlayer.SeasonChecker</Product>
-	<IncludeSymbols>true</IncludeSymbols>
-	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageTags>Season, DateTime</PackageTags>
-    <PackageProjectUrl>https://github.com/MintPlayer/MintPlayer.SeasonChecker/MintPlayer.SeasonChecker</PackageProjectUrl>
-    <PackageReleaseNotes>Add overload to pick hemisphere with built-in seasons</PackageReleaseNotes>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Company>MintPlayer</Company>
+		<Authors>Pieterjan De Clippel</Authors>
+		<Version>1.1.3</Version>
+		<Description>This package allows you to find the season for a certain date.</Description>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/MintPlayer/MintPlayer.SeasonChecker</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageId>MintPlayer.SeasonChecker</PackageId>
+		<Product>MintPlayer.SeasonChecker</Product>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageTags>Season, DateTime</PackageTags>
+		<PackageProjectUrl>https://github.com/MintPlayer/MintPlayer.SeasonChecker/MintPlayer.SeasonChecker</PackageProjectUrl>
+		<PackageReleaseNotes>Add overload to pick hemisphere with built-in seasons</PackageReleaseNotes>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7" />
-    <PackageReference Include="MintPlayer.SeasonChecker.Abstractions" Version="1.0.3" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7" />
+		<PackageReference Include="MintPlayer.SeasonChecker.Abstractions" Version="1.0.3" />
+	</ItemGroup>
 
 </Project>
