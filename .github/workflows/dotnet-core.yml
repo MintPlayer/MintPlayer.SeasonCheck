@@ -12,11 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v1.5.0
       with:
         dotnet-version: 3.1.301
+        source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+      env:
+        NUGET_AUTH_TOKEN: '%NUGET_AUTH_TOKEN%'
     - name: Install dependencies
       run: dotnet restore
     - name: Build
@@ -28,4 +32,6 @@ jobs:
     - name: PushNuget
       run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.PUBLISH_TO_NUGET_ORG}} --skip-duplicate
     - name: PushGithub
-      run: dotnet nuget push *.nupkg --source https://nuget.pkg.github.com/MintPlayer/index.json --api-key ${{secrets.PUBLISH_TO_GITHUB_COM}} --no-symbols --skip-duplicate
+      run: dotnet nuget push *.nupkg --no-symbols --skip-duplicate
+      env:
+        NUGET_AUTH_TOKEN: ${{ github.token }}
