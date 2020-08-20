@@ -19,7 +19,7 @@ jobs:
       with:
         dotnet-version: 3.1.301
         # Authenticates packages to push to GPR
-        #source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+        source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
       env:
         NUGET_AUTH_TOKEN: '%NUGET_AUTH_TOKEN%'
     - name: Install dependencies
@@ -33,6 +33,7 @@ jobs:
     - name: PushNuget
       run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.PUBLISH_TO_NUGET_ORG }} --skip-duplicate
     - name: PushGithub
-      run: dotnet nuget push *.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --no-symbols --skip-duplicate
-      #env:
-      #  NUGET_AUTH_TOKEN: ${{ github.token }}
+      #run: dotnet nuget push *.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ github.token }} --no-symbols --skip-duplicate
+      run: dotnet nuget push *.nupkg --no-symbols --skip-duplicate
+      env:
+        NUGET_AUTH_TOKEN: ${{ github.token }}
