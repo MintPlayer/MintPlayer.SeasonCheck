@@ -4,7 +4,7 @@
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<Company>MintPlayer</Company>
 		<Authors>Pieterjan De Clippel</Authors>
-		<Version>1.1.15</Version>
+		<Version>1.1.16</Version>
 		<Description>This package allows you to find the season for a certain date.</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/MintPlayer/MintPlayer.SeasonChecker</RepositoryUrl>
