@@ -12,7 +12,7 @@
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<PackageTags>Season, DateTime</PackageTags>
-		<Version>1.0.3</Version>
+		<Version>1.2.0</Version>
 		<PackageReleaseNotes>Added hemisphere</PackageReleaseNotes>
 	</PropertyGroup>
 
