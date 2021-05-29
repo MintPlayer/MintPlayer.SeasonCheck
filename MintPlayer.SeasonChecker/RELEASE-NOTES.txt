@@ -1,0 +1,5 @@
+﻿v1.2.0
+- Replaced abstractions PackageReference with ProjectReference
+
+v1.3.0
+- Added Microsoft.SourceLink PackageReference

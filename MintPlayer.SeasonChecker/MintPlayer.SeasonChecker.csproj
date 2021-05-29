@@ -4,7 +4,7 @@
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<Company>MintPlayer</Company>
 		<Authors>Pieterjan De Clippel</Authors>
-		<Version>1.2.2</Version>
+		<Version>1.3.0</Version>
 		<Description>This package allows you to find the season for a certain date.</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/MintPlayer/MintPlayer.SeasonChecker</RepositoryUrl>
@@ -15,15 +15,28 @@
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<PackageTags>Season, DateTime</PackageTags>
 		<PackageProjectUrl>https://github.com/MintPlayer/MintPlayer.SeasonChecker/MintPlayer.SeasonChecker</PackageProjectUrl>
-		<PackageReleaseNotes>Add overload to pick hemisphere with built-in seasons</PackageReleaseNotes>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	</PropertyGroup>
 
+  <Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
+    <ReadLinesFromFile File="./RELEASE-NOTES.txt">
+      <Output TaskParameter="Lines" ItemName="ReleaseNoteLines" />
+    </ReadLinesFromFile>
+    <PropertyGroup>
+      <PackageReleaseNotes>@(ReleaseNoteLines, '%0a')</PackageReleaseNotes>
+    </PropertyGroup>
+  </Target>
+  
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.7" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\MintPlayer.SeasonChecker.Abstractions\MintPlayer.SeasonChecker.Abstractions.csproj" />
+		<ProjectReference Include="..\MintPlayer.SeasonChecker.Abstractions\MintPlayer.SeasonChecker.Abstractions.csproj" />
 	</ItemGroup>
 
 </Project>
